@@ -1,0 +1,21 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+<!DOCTYPE html>
+<html>
+<head runat="server">
+    <title>Project Tracker</title>
+    <link href="Content/site.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="topbar">
+        <asp:HyperLink ID="lnkHome" runat="server" NavigateUrl="~/Default.aspx">Home</asp:HyperLink>
+        <asp:HyperLink ID="lnkProjects" runat="server" NavigateUrl="~/Projects/Projects.aspx">Projects</asp:HyperLink>
+        <asp:HyperLink ID="lnkAdmin" runat="server" NavigateUrl="~/Admin/Users.aspx">Admin</asp:HyperLink>
+        <asp:HyperLink ID="lnkAssignDev" runat="server" NavigateUrl="~/Projects/AssignDev.aspx">Assign Developers</asp:HyperLink>
+        <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click" Text="Logout" />
+        <asp:Label ID="lblUser" runat="server" />
+    </div>
+    <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+    </form>
+</body>
+</html>
